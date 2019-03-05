@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="group12.cse535.com.health_monitoring_ui.MainActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:id="@+id/graphView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.924" />
+
+    <Button
+        android:id="@+id/btnRun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="39dp"
+        android:layout_marginRight="5dp"
+        android:text="Run"
+        android:background="#A4C639"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.224"
+        android:layout_marginRight="5dp"
+        android:text="Stop"
+        android:background="#FF0000"/>
+
+    <TextView
+        android:id="@+id/txtPatientId"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:text="Patient ID"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editPatientId"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:inputType="number"
+        android:hint="Patient ID"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintLeft_toRightOf="@id/txtPatientId"
+        android:layout_marginStart="9dp"/>
+
+    <TextView
+        android:id="@+id/txtAge"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:text="Age"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPatientId"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:inputType="number"
+        android:hint="Age"
+        app:layout_constraintTop_toBottomOf="@id/editPatientId"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintLeft_toRightOf="@id/txtAge"
+        android:layout_marginStart="9dp"/>
+
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAge"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:inputType="textPersonName"
+        android:hint="Patient Name"
+        app:layout_constraintTop_toBottomOf="@id/editAge"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintLeft_toRightOf="@id/txtName"
+        android:layout_marginStart="9dp"/>
+
+
+    <TextView
+        android:id="@+id/txtSex"
+        android:layout_width="64dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:text="Sex"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        android:layout_marginStart="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/editName"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintLeft_toRightOf="@id/txtSex"
+        android:layout_marginStart="9dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+            android:text="Male"/>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            android:text="Female"/>
+
+    </RadioGroup>
+
+
+
+</android.support.constraint.ConstraintLayout>
